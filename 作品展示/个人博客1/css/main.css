@@ -5,6 +5,11 @@
     content: '';
 }
 
+a:hover{
+  color: #aaa;
+  text-decoration: none;
+}
+
 ul {
     margin: 0;
 }
@@ -307,6 +312,11 @@ ul.share-group {
 .scroll-down {
     cursor: pointer;
 }
+
+.scroll-down:hover{
+  color: rgba(0,0,0,.9);
+}
+
 .text-section{
     padding-bottom: 30px;
 }
