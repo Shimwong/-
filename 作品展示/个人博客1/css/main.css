@@ -5,9 +5,9 @@
     content: '';
 }
 
-a:hover{
-  color: #aaa;
-  text-decoration: none;
+a:hover {
+    color: #aaa;
+    text-decoration: none;
 }
 
 ul {
@@ -155,9 +155,11 @@ button {
 .gray-section .img-section {
     width: 45%;
 }
-.gray-section .img-section:nth-child(2){
-  float: right;
+
+.gray-section .img-section:nth-child(2) {
+    float: right;
 }
+
 .img-section img {
     width: 100%;
 }
@@ -313,13 +315,14 @@ ul.share-group {
     cursor: pointer;
 }
 
-.scroll-down:hover{
-  color: rgba(0,0,0,.9);
+.scroll-down:hover {
+    color: rgba(0, 0, 0, .9);
 }
 
-.text-section{
+.text-section {
     padding-bottom: 30px;
 }
+
 /*.btn1{ 获取 scrollTop值的按钮
     position: fixed;
     right: 20px;
@@ -332,14 +335,17 @@ ul.share-group {
     .gray-section .text-section {
         width: 100%;
     }
+
     .purple-wrapper {
         margin: 0 auto;
         width: 100%;
     }
-    .purple-section{
+
+    .purple-section {
         padding: 0;
     }
-    .purple-section .heading-wrapper{
+
+    .purple-section .heading-wrapper {
         padding: 20px;
     }
 }
