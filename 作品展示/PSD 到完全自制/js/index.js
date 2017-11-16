@@ -33,32 +33,35 @@
     // });
     function changePoint() { // 圆点随图片改变 功能  暖色调图片和冷色调图片对应 不同颜色 圆点
         // alert(page); 查看当前页数
-        if (page < 5) {
-            $('.point-group span').eq(page - 1).addClass('active').siblings().removeClass('active').removeClass('active2');
+        if (!$('.point-group span').is(':animated')) {
+            if (page < 5) {
+                $('.point-group span').eq(page - 1).addClass('active').siblings().removeClass('active').removeClass('active2');
 
-        } else {
-            $('.point-group span').eq(page - 5).addClass('active2').siblings().removeClass('active').removeClass('active2');
+            } else {
+                $('.point-group span').eq(page - 5).addClass('active2').siblings().removeClass('active').removeClass('active2');
+            }
         }
     }
 
     //上一张
     $('.prev').click(function () {
         if (!$('.show-wrapper').is(':animated')) {
-        }
-        var wl = parseInt($(".show-wrapper").css("marginLeft"));
-        page--;
-        if (page < 1) {
-            page = 8;
-        }
-        $('.show-wrapper').animate({marginLeft: wl + offSet + 'px'}, 'fast', function () {
-            if (parseInt($(this).css("marginLeft")) > -290) {
-                $(this).css("marginLeft", "-2320px");
+            var wl = parseInt($(".show-wrapper").css("marginLeft"));
+            // 变化后的页数
+            page--;
+            // 若变化后的页数小于1,需要跳转到第8页,也就是第二组最后一页
+            if (page < 1)
                 page = 8;
-            }
-        });
-        //右上角圆点变化
+            $('.show-wrapper').animate({marginLeft: wl + offSet + 'px'}, 'fast', function () {
+                // 若变化后的页数小于1, 将当前marginLeft设为第二组最后一页的margin
+                if (parseInt($(this).css("marginLeft")) > -290) {
+                    $(this).css("marginLeft", "-2320px");
+                }
+            });
+            //右上角圆点变化
 
-        changePoint();
+            changePoint();
+        }
     });
     //下一张
     $('.next').click(function () {
