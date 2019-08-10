@@ -1,0 +1,106 @@
+/*! minireset.css v0.0.2 | MIT License | github.com/jgthms/minireset.css */
+html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    font-size: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+button,
+input,
+select,
+textarea {
+    margin: 0;
+}
+
+/* 取消文本框边框,扁平化设计 */
+input, select, textarea {
+    outline: none;
+    border: none;
+}
+
+textarea {
+    resize: none;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 12px;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+*:before, *:after {
+    box-sizing: inherit;
+}
+
+img,
+embed,
+object,
+audio,
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+img {
+    border: none;
+}
+
+iframe {
+    border: 0;
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+td,
+th {
+    padding: 0;
+    text-align: left;
+}
+
+/* 清除浮动 */
+.clearfix:after {
+    display: block;
+    clear: both;
+    content: "";
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+/* 大部分a的颜色都是灰色的,在这里统一设置 */
+a {
+    display: block;
+    color: #656565;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #c96c02;
+}
+
+/* 设置左右浮动类名 */
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}

@@ -1,0 +1,432 @@
+/* reset 部分 */
+
+body, div, dl, dt, dd, ul, li, h1, h2, h3, h4, h5, h6, input, form, a, p, textarea {
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica Neve", Helvetica, Arial, sans-serif;
+}
+
+ol, ul, li {
+    list-style: none;
+}
+
+a {
+    display: block;
+    color: #999; /* 这里虽然设为了块状元素, 但是只要浮动就不会独占一行 */
+}
+
+a,
+a:hover,
+a:visited,
+a:active {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #777;
+}
+
+img { /* 消除 hack: 图片下面有 4px 的间隙 */
+    display: block;
+    border: none;
+}
+
+.clearfloat {
+    zoom: 1; /* IE清除浮动 */
+}
+
+.clearfloat::after {
+    display: block;
+    visibility: hidden;
+    clear: both;
+    height: 0;
+    content: "";
+}
+
+/* 公共部分 */
+.public-container {
+    position: relative;
+    margin: 0 auto;
+    width: 1100px;
+}
+
+/* 公共头部 */
+.header-logo {
+    float: left;
+    margin-top: 40px;
+    width: 181px;
+    height: 54px;
+    background: url("../images/index-header-logo.png") no-repeat;
+}
+
+.theme-header {
+    height: 110px;
+}
+
+.theme-header ul {
+    float: right;
+    /* 看到 float 就清除浮动 */
+    margin-top: 50px;
+}
+
+.theme-header li {
+    float: left;
+    margin-left: 50px;
+    font-size: 14px;
+}
+
+.theme-header li a {
+    color: #3b3b3b;
+}
+
+/* 公共尾部  */
+.theme-footer {
+    height: 318px;
+    background-color: #3b3b3b;
+}
+
+.theme-footer ul, .theme-footer .copyright {
+    float: left;
+    margin-top: 93px;
+    margin-right: 60px;
+    width: 230px;
+}
+
+.theme-footer .copyright:last-child {
+    margin-right: 0;
+}
+
+.theme-footer li {
+    color: #fff;
+    line-height: 30px;
+}
+
+.footer-logo {
+    margin-top: -16px;
+    margin-bottom: 12px;
+    width: 182px;
+    height: 55px;
+    background: url("../images/index-footer-logo.png") no-repeat;
+}
+
+.copyright-txt p {
+    color: #fff;
+    font-size: 14px;
+    line-height: 30px;
+}
+
+.copyright-txt p a {
+    display: inline-block;
+}
+
+#back-to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    display: none;
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 25%;
+    background: rgba(225, 225, 225, .3);
+    box-shadow: 0 0 1px 1px #000;
+    color: rgb(254, 96, 25);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* 主体部分 */
+.index-banner {
+    position: relative;
+    overflow: hidden;
+    height: 570px;
+}
+
+.index-banner img {
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.banner-logo {
+    margin-bottom: 20px;
+}
+
+.banner-over {
+    position: absolute;
+    top: 210px;
+    left: 50%;
+    margin-left: -388px;
+}
+
+.banner-txt {
+    text-align: center;
+}
+
+.banner-txt .txt {
+    margin: 0 34px;
+    color: #fff;
+}
+
+.banner-txt .line {
+    display: inline-block;
+    width: 40px;
+    border-top: 1px solid #fff;
+    vertical-align: middle;
+}
+
+.index-menu {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 200px;
+    height: 545px;
+    border-top: 4px solid #f34949;
+}
+
+.index-menu .menu-title {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -78px;
+    width: 156px;
+    height: 70px;
+    background-color: #f34949;
+    color: #fff;
+    text-align: center;
+    font-size: 20px;
+    line-height: 70px;
+}
+
+.index-menu .menu-title::after { /* css 实现倒三角 */
+    position: absolute; /* 定位方式和寄生元素相同 */
+    bottom: 0;
+    left: 0;
+    border-right: 78px solid transparent;
+    border-bottom: 10px solid #fff; /* solid 不能省 */
+    border-left: 78px solid transparent;
+    content: '';/* 伪元素基本属性,最为关键 */
+}
+
+.menu-list {
+    margin-top: 152px;
+    height: 412px;
+}
+
+.menu-list ul {
+    width: 1220px; /* container的width + li的右外边距, 防止最右边的li 被挤到下一行 */
+}
+
+.menu-list li {
+    float: left;
+    margin-bottom: 60px;
+    width: 608px;
+}
+
+.menu-list .list-item {
+    margin-right: 118px; /* 不要加padding, 最好加 margin */
+    width: 492px;
+    height: 36px;
+}
+
+.menu-list .list-item a {
+    float: left;
+    width: 230px;
+}
+
+.menu-list a h4 {
+    margin-bottom: 6px;
+    color: #555;
+}
+
+.menu-list a p {
+    color: #b7b7b7;
+    font-size: 12px;
+}
+
+.menu-list .list-line {
+    float: left;
+    margin-top: 10px;
+    width: 192px;
+    border-top: 1px solid #e3e1e1;
+}
+
+.menu-list .list-item .price {
+    float: right;
+    color: #555;
+}
+
+.menu-btn {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    /*width: 120px;  这个宽度不包括 padding,  为了更灵活, 不指定宽度了, 自适应文字宽度 */
+    margin-left: -68px;
+    padding-left: 14px;
+    height: 32px;
+    border: 1px solid #d7d5d5;
+    color: #b7b7b7;
+    text-align: center;
+    font-size: 14px;
+    line-height: 32px;
+    cursor: pointer;
+}
+
+.vertical-bar {
+    margin-left: 14px;
+    color: #b7b7b7;
+}
+
+.menu-icon {
+    display: inline-block;
+    margin-right: 12px;
+    margin-left: 9px;
+    width: 11px;
+    height: 7px;
+    background: url("../images/menu-btn-down.png") no-repeat;
+}
+
+.pic-group {
+    margin-top: 130px;
+    margin-bottom: 200px;
+    height: 381px;
+}
+
+.pic-clo-s, .pic-col-m, .pic-col-l {
+    float: left;
+}
+
+.pic-clo-s {
+    width: 287px;
+}
+
+.index-content1 {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 200px;
+    height: 385px;
+}
+
+.show-wrapper {
+    margin-top: 80px;
+    margin-bottom: 200px;
+    margin-left: -1160px;
+    width: 5000px;
+    height: 277px;
+}
+
+.arrow {
+    position: absolute;
+    top: 169px;
+    bottom: 147px;
+    display: none;
+    width: 40px;
+    background-color: rgba(0, 0, 0, .5);
+    color: #fff;
+    text-align: center;
+    font-size: 20px;
+    line-height: 73px;
+    cursor: pointer;
+}
+
+.arrow:hover {
+    background-color: rgba(0, 0, 0, .8);
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.content-title h3 {
+    float: left;
+    margin-right: 42px;
+    color: #3b3b3b;
+    font-size: 20px;
+}
+
+.title-line {
+    display: inline-block;
+    float: left;
+    margin-top: 10px;
+    width: 200px;
+    border-top: 1px solid #e3e3e3;
+}
+
+.point-group {
+    float: right;
+    font-size: 0;
+}
+
+.point-group span {
+    display: inline-block; /* 行内元素不能设置宽高 */
+    margin-left: 10px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: #dedede;
+}
+
+.point-group .active {
+    background-color: #fe8d17;
+}
+
+.point-group .active2 {
+    background-color: #2b1e18;
+}
+
+.show {
+    float: left;
+    margin-right: 60px;
+}
+
+.show-wrapper:hover>.arrow { /* 鼠标移入.show-wrapper时找到子元素.arrow */
+    display: block;
+}
+
+.show-pic {
+    margin-bottom: 30px;
+    width: 230px;
+    height: 200px;
+}
+
+.show-txt {
+    float: left;
+    width: 230px;
+}
+
+.show-txt h4 a {
+    float: left;
+    color: #555;
+}
+
+.show-txt h4 a:hover {
+    color: #333;
+}
+
+.show-txt .price {
+    float: right;
+    color: #555;
+}
+
+.star-group {
+    font-size: 0;
+}
+
+.show-txt .star {
+    display: inline-block;
+    margin-top: 14px;
+    margin-right: 5px;
+    width: 12px;
+    height: 13px;
+    background: url("../images/stars.png") no-repeat;
+}
+
+.show-txt .no-star { /* 调整雪碧图位置 */
+    background-position: 0 -13px;
+}
+
+/* 文字不能被选中, 适用于各种箭头,按钮 */
+.unselectable {
+    -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;
+}

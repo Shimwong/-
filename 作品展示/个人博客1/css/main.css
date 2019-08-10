@@ -1,0 +1,362 @@
+
+.clearfix:after { /* 清除浮动 */
+    display: block;
+    clear: both;
+    content: '';
+}
+
+a:hover {
+    color: #aaa;
+    text-decoration: none;
+}
+
+ul {
+    margin: 0;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+nav {
+    height: 50px;
+    background-color: #000;
+}
+
+#banner {
+    height: 700px;
+    background-color: transparent;
+}
+
+nav ul {
+    float: right;
+    margin: 0;
+    list-style: none;
+}
+
+nav ul li, nav .logo {
+    display: inline-block;
+    margin-right: 20px;
+    line-height: 50px;
+}
+
+nav ul li a, nav .logo a {
+    display: inline-block;
+    height: inherit;
+    color: #fff;
+    text-decoration: none;
+    line-height: 50px;
+}
+
+nav .logo {
+    float: left;
+    padding: 0 10px;
+}
+
+#banner .inner {
+    position: relative;
+    top: 160px;
+    margin: 0 auto;
+    max-width: 300px;
+    color: #fff;
+    text-align: center;
+}
+
+#banner .inner h1 {
+    margin: 0;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    background-color: #333;
+    color: #eee;
+}
+
+#banner button {
+    padding: 14px 40px;
+}
+
+.sub-heading {
+    margin: 30px 0;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.logo {
+    letter-spacing: 1px;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.logo a {
+    color: #fff;
+}
+
+.hr {
+    margin: 20px auto;
+    width: 100%;
+    height: 2px;
+}
+
+.green-section {
+    padding: 100px 0;
+    background-color: #009292;
+    color: #fff;
+    text-align: center;
+}
+
+.green-section .hr {
+    width: 60%;
+    background-color: #008686;
+}
+
+.green-section .icon-group .icon { /* 绿色部分的旋转图标 */
+    display: inline-block;
+    margin: 20px;
+    width: 200px;
+    height: 200px;
+    border: #006767 solid 5px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.green-section .icon-group .icon img {
+    width: 180px;
+    height: 180px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.icon-group {
+    margin-top: 60px;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 1080px;
+}
+
+.gray-section {
+    background-color: rgba(37, 47, 52, 0.8);
+    color: #fff;
+}
+
+.gray-section .img-section {
+    width: 45%;
+}
+
+.gray-section .img-section:nth-child(2) {
+    float: right;
+}
+
+.img-section img {
+    width: 100%;
+}
+
+.gray-section .text-section {
+    width: 50%;
+}
+
+.article-preview > div {
+    float: left;
+    font-size: 0;
+}
+
+.article-preview:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.article-preview:after {
+    display: block;
+    clear: both;
+    content: '';
+}
+
+.text-section {
+    margin-left: 30px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+p {
+    letter-spacing: 1px;
+    font-size: 18px;
+}
+
+.text-section .sub-heading {
+    margin-top: 0;
+    font-size: 22px;
+}
+
+.text-section p {
+    letter-spacing: 1px;
+    font-size: 18px;
+}
+
+.text-section > * {
+    max-width: 90%;
+}
+
+.purple-section {
+    padding: 80px;
+    background-color: rgba(94, 60, 128, 0.9);
+    color: #fff;
+}
+
+.purple-wrapper {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.purple-section .heading-wrapper {
+    text-align: center;
+}
+
+.purple-section .hr {
+    width: 60%;
+    background-color: #493469;
+}
+
+.card {
+    float: left;
+    min-height: 300px;
+    width: 50%;
+}
+
+.card-wrapper {
+    margin: 30px;
+}
+
+.card:first-child { /* 紫色部分的半透明卡片 */
+    background-color: rgba(0, 0, 0, 0.04);
+}
+
+.card:nth-child(2) {
+    background-color: rgba(0, 0, 0, 0.08);
+}
+
+.card:nth-child(3) {
+    background-color: rgba(0, 0, 0, 0.12);
+}
+
+.card:nth-child(4) {
+    background-color: rgba(0, 0, 0, 0.16);
+}
+
+.card:nth-child(5) {
+    background-color: rgba(0, 0, 0, 0.20);
+}
+
+.card:nth-child(6) {
+    background-color: rgba(0, 0, 0, 0.24);
+}
+
+footer {
+    min-height: 200px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    text-align: center;
+}
+
+ul.share-group {
+    display: block;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.share-group li {
+    display: inline-block;
+    padding: 20px;
+}
+
+.share-group li a {
+    display: inline-block;
+}
+
+.share-group li img {
+    width: 30px;
+    height: 30px;
+}
+
+.copy {
+    padding-bottom: 20px;
+    color: #999;
+}
+
+.main-wrapper {
+    background-color: #444;
+    background-image: url("../img/banner.jpg");
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+}
+
+.scroll-down {
+    cursor: pointer;
+    margin-top: 100px;
+    padding: 50px;
+}
+
+.scroll-down:hover {
+    color: rgba(0, 0, 0, .9);
+}
+
+.text-section {
+    padding-bottom: 30px;
+}
+
+/*.btn1{ 获取 scrollTop值的按钮
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    cursor: pointer;
+}*/
+@media (max-width: 718px) {
+    /* 响应式改造 */
+    .gray-section .img-section,
+    .gray-section .text-section {
+        width: 100%;
+    }
+
+    .purple-wrapper {
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .purple-section {
+        padding: 0;
+    }
+
+    .purple-section .heading-wrapper {
+        padding: 20px;
+    }
+}
+
+#back-to-top { /* 回到顶部按钮 */
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    display: none;
+    padding: 5px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, .3);
+    color: #999;
+    cursor: pointer;
+}
